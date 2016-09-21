@@ -3,6 +3,8 @@ clear
 close all
 load datatraffic
 
+%BRA JOBBAT FREDRIK!!!!!!
+
 % Plockar fram värden ur datatraffic
 D1 = traffic(:, 1); %datatrafik video
 D2 = traffic(:, 2); %datatrafik filöverföringar
