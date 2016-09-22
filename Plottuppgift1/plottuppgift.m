@@ -25,7 +25,7 @@ subplot(2, 1, 2);
 averagetraffic = traffic/9.7; %Datatraffic for each person in GB
 % To make it easier for the computer to calculate the 
 % averagetraffic, traffic*10^15/((9.7*10^6)*(10^9) was 
-% shortned to: traffic/9.7 
+% shortned to: traffic/9.7
 Dpp1 = averagetraffic(:, 1); %Datatraffic for each person in video
 Dpp2 = averagetraffic(:, 2); %Datatraffic for each person in file transfers
 Dpp3 = averagetraffic(:, 3); %Datatraffic for each person in webb and otherthings
