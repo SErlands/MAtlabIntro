@@ -30,6 +30,9 @@ parties = {'M', 'C', 'FP', 'KD', 'PP', 'MP', 'SD', 'FI', 'S', 'V', 'Other'};
 % Runs the function electionresults that plots each partys % of votes.
 electionresults(sumeuval, parties);
 
-% 
+%
+seats=45;
+alocateseats(sumeuval, seats, 2)
+
 
 
