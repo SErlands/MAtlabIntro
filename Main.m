@@ -30,7 +30,7 @@ seats3 = [0 0 0 0 0];
 %% Runing functions
 
 % Runs the function electionresults that plots each partys % of votes.
-electionresults(euvalet2014, parties)
+%electionresults(euvalet2014, parties)
 %
 %seats=45;
 
@@ -38,4 +38,13 @@ electionresults(euvalet2014, parties)
 %allocate_seat(votes, seats)
 %allocate_seat([4 208 3 208], [0 1 0 1])
 
-allocate_seats(votes2, seats3, 10)
+% Task 2.5
+% Returnerar enligt exempel under 2.5, förrutom att jämförelsetalet,
+% blir fel på en av partierna, som för någon anledning är den senaste
+% som fått mandat.
+[m1, z1] = alocateseats(votes2, 5, 1);
+[m2, z2] = alocateseats(votes2, 5, 2);
+[m3, z3] = alocateseats(votes2, 5, 3);
+
+%m = [1 2 0 5];
+%sainte(m)
