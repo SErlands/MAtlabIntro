@@ -1,7 +1,6 @@
-%Main script were we store things that will be used in more then one
-%function
+%%Main script were we store things that will be used in more then one
+%%function
 
-%% Data
 clear
 load('euelection2014.mat')
 
@@ -19,20 +18,22 @@ S=euvalet2014(:,9);
 V=euvalet2014(:,10);
 Other=euvalet2014(:,11);
 
-% Adds up all the votes for each party and puts them in a vector
-sumeuval = sum(euvalet2014);
-
 % Labels
 parties = {'M', 'C', 'FP', 'KD', 'PP', 'MP', 'SD', 'FI', 'S', 'V', 'Other'};
+votes = sum(euvalet2014); % array of total votes for each party
+seats = [0 0 0 0 0 0 0 0 0 0 0];
+
 
 %% Runing functions
 
 % Runs the function electionresults that plots each partys % of votes.
-electionresults(sumeuval, parties);
-
+electionresults(euvalet2014, parties)
 %
 seats=45;
-alocateseats(sumeuval, seats, 2)
+%Funkar inte som den ser ut nu
+%alocateseats(votes, seats, 2)
 
 
 
+allocate_seat(votes, seats)
+%allocate_seat([4 208 3 208], [0 1 0 1])
