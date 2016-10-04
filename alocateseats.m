@@ -1,8 +1,10 @@
-function [m, z] = alocateseats(votes, t, method)
+function [m, z] = alocateseats(votes, t, method, minpercent)
 %% A function to alocate seats using the Dhondt's method
 
 % Creats an arryas of zeros the same size as votes.
 m=zeros(size(votes));
+
+m = enoughpercent(votes, m, minpercent);
 
 % % Takes out the index of biggest number in the vector that has ben
 % % calculated using the Dhondt's method.
