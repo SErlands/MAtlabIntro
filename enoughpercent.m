@@ -1,8 +1,9 @@
-function [m] = enoughpercent(votes, m,  minpercent)
+function [z] = enoughpercent(votes, minpercent)
 %% Function that checks if a party has enough votes
 % Calculates the sum of each vote
 sumevotes = sum(votes);
 % Calculte the min of votes a party must have
-min = sumevotes*minpercent;
+minvotes = sumevotes*minpercent;
 
-m = votes > min;
+m = votes > minvotes; % take out a vector coint
+z= m.*votes;
