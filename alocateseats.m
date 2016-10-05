@@ -24,7 +24,7 @@ m = enoughpercent(votes, m, minpercent);
 
 
 % The function to alocate the seats.
-for n = 1:t
+for n = 1:t 
     if method==1
         z = votes./(m+1); % quotient using D'Honts metod
         [~, index] = max(z);
@@ -36,6 +36,6 @@ for n = 1:t
         z = votes./f; % quotient using modified Sainte-Laguës metod
         [~, index] = max(z);
     end
-    m(index)=m(index) + 1;
+    m(1)=m(1) + 1;
 end
 

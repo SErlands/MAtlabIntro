@@ -42,9 +42,9 @@ electionresults(euvalet2014, parties)
 % Returnerar enligt exempel under 2.5, förrutom att jämförelsetalet,
 % blir fel på en av partierna, som för någon anledning är den senaste
 % som fått mandat.
-[m1, z1] = alocateseats(votes2, 5, 1, 0.01)
-[m2, z2] = alocateseats(votes2, 5, 2, 0.01)
-[m3, z3] = alocateseats(votes2, 5, 3, 0.01)
+[m1, z1] = alocateseats(votes2, 10, 1, 0.4)
+%[m2, z2] = alocateseats(votes2, 5, 2, 0.01)
+%[m3, z3] = alocateseats(votes2, 5, 3, 0.01)
 
 %m = [1 2 0 5];
 %sainte(m)
