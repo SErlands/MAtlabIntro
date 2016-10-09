@@ -21,10 +21,5 @@ for i = 1:n
 end
 
 parties_with_seats = parties(m_nonzero); % parties with seats
-seatless_parties = parties(m_zero); % parties without seats (unused)
 
 end
-
-% Alt: allocate space for optimization
-% L1 = length(nonzero_seats); om vi vill optimera genom att allokera utrymme
-% L2 = n - L1;

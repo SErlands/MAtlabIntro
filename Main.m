@@ -1,38 +1,28 @@
-%%Main script were we store things that will be used in more then one
-%%function
+%%vMain script that the diffrent in variabels can be changed 
 
 clear
-load('euelection2014.mat')
+% Takes in the data
+%load('euelection2014.mat')
+euval2009=[899074,241101,204005,368514,220574,572591,507488,82763,359248,234272,27148];
 
-% adds the votes each party got from the diffrent districts.
-votes = sum(euvalet2014); % array of total votes for each party
+
+% Adds the votes each party got from the diffrent districts.
+%votes = sum(euvalet2014); 
+votes = euval2009;
 
 
 % Labels for the parties
-parties = {'M', 'C', 'FP', 'KD', 'PP', 'MP', 'SD', 'FI', 'S', 'V', 'Other'};
-minpercent = 0.04;
-totalseats = 20;
+%parties = {'M', 'C', 'FP', 'KD', 'PP', 'MP', 'SD', 'FI', 'S', 'V', 'Other'};
+parties = {'s', 'c', 'fi', 'fp','kd','mp','m','pp','sd','v','others'}; 
 
-% Just for testing
-votes2 = [6 19 5 10 4];
+% The minimun precentages
+minpercent = 0.04;
+% The number of seats that is to be alocated
+totalseats = 20;
 
 
 %% Runing functions
-
-% Runs the function electionresults that plots each partys % of votes.
-%electionresults(euvalet2014, parties)
-
-% Runs the function alocateseats with diffrent values.
-%[m1, z1] = alocateseats(votes2, 5, 1, 0.0001)
-%[m2, z2] = alocateseats(votes2, 5, 2, 0.0001)
-%[m3, z3] = alocateseats(votes2, 5, 3, 0.0001)
-
-%[m4, z4] = alocateseats(votes2, 5, 1, 0.2)
-%[nonzero_seats, seatless_parties, parties_with_seats] = seatsvisualized(m4, parties)
-%[m5, z5] = alocateseats(votes, 20, 3, 0.04)
-%seatsvisualized(m5, parties)
-
-%% Run everyting
+% Runs the function that creats the graph for each method
 figure(1)
 [seats1, quotients1] = electionresults(votes, parties, minpercent, totalseats, 1);
 figure(2)
