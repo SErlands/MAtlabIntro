@@ -1,6 +1,5 @@
 function [seats, quotients] = electionresults(votes, parties, minpercent, totalseats, method)
-% Creates a pie chart showing the election result and a bar chart showing
-% the distribution of seats.
+% Creates a pie chart showing the election result and a bar chart 
 % Inarguments:  election - vector containing the election results for each party..
 %               parties  - cell structure containing the names of each party.
 

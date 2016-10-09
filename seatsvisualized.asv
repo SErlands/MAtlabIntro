@@ -1,11 +1,14 @@
 function [nonzero_seats, parties_with_seats, seatless_parties] = seatsvisualized(seats, parties)
+% Visualizes how seats are split between parties. Parties without seats are
+% not included.
 % Takes list of seats and list of parties.
-% Returns list of "nonzero seats" and parties with the corresponding index.
-% Also returns index of "seatless parties".
+% Returns list of "nonzero seats" and the parties  
 
 nonzero_seats = seats(seats~=0); % list of nonzero seats
 
 n = length(seats);
+%L1 = length(nonzero_seats); om vi vill optimera genom att allokera utrymme
+%L2 = n - L1;
 
 m_zero = []; % Index of parties without seats.
 m_nonzero = []; % Index of parties with seats.
@@ -25,6 +28,3 @@ seatless_parties = parties(m_zero); % parties without seats (unused)
 
 end
 
-% Alt: allocate space for optimization
-% L1 = length(nonzero_seats); om vi vill optimera genom att allokera utrymme
-% L2 = n - L1;
