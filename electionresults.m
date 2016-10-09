@@ -28,7 +28,7 @@ subplot(2, 1, 2);
 bar(nonzero_seats)
 set(gca, 'XTickLabel', parties_with_seats);
 ylabel('Seats');
-title_string = strcat('Number of seats per party', method_string); % merge two strings to form title
+title_string = strcat('Number of seats per party using', method_string); % merge two strings to form title
 title(title_string)
 
 %pie(nonzero_seats)
