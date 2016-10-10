@@ -10,8 +10,8 @@ n = length(seats);
 m_zero = []; % Index of parties without seats.
 m_nonzero = []; % Index of parties with seats.
 
-% Builds one list containing index from parties with zero seats 
-% and one from parties with seats.
+% Builds one list containing index of parties with zero seats 
+% and one of parties with seats.
 for i = 1:n
     if seats(i) == 0
         m_zero = [m_zero, i]; % merges new index with list
@@ -28,3 +28,5 @@ end
 % Alt: allocate space for optimization
 % L1 = length(nonzero_seats); om vi vill optimera genom att allokera utrymme
 % L2 = n - L1;
+% zeroes(L1), zeroes(L2)
+% m_zero(i) = i   osv.
