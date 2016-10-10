@@ -1,10 +1,14 @@
 function [m, filtredvotesnew] = alocateseats(votes, t, method, minpercent)
-%% A function to alocate seats using the Dhondt's method
+% A function to alocate seats using the Dhondt's method, Sainte-Laguës metod, or modified Sainte-Laguës metod
+% votes - number of votes for each party
+% t - number of seats to be alocated
+% method - choise of method (1, 2, or 3)
+% minprecent - threshold for geting a seat
 
 % Creats an arryas of zeros the same size as votes.
 m=zeros(size(votes));
 
-% 
+% Sets the partys that dosent satifying the miniumvotes votes to zero
 filtredvotes = enoughpercent(votes, minpercent);
 
 % The function to alocate the seats.
